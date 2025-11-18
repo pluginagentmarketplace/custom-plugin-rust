@@ -1,8 +1,16 @@
-# Custom-Plugin-Rust 🚀
+# 🚀 Custom-Plugin-Rust
 
-**The Ultimate Developer Learning System**
+## The Ultimate AI-Powered Developer Learning System
 
-A comprehensive Claude Code plugin with **7 expert agents** and **71+ developer roles** covering everything from Frontend to Blockchain. Master any technology with structured learning paths, interactive skills, and guided assessments.
+**Master 71+ Technologies | 7 Expert Agents | 1000+ Code Examples | Certified Learning Paths**
+
+A production-grade Claude Code plugin designed to help developers of all levels master any technology stack through AI-powered, personalized learning paths. Powered by developer roadmaps and built with enterprise-grade architecture.
+
+> **One command to install. Your entire tech journey powered by Claude Code.**
+
+```bash
+plugin add custom-plugin-rust
+```
 
 ## 🎯 Features
 

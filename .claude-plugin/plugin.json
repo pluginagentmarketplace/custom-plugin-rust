@@ -134,6 +134,49 @@
     "agents": true,
     "skills": true,
     "commands": true,
-    "hooks": false
+    "hooks": true,
+    "mcp": true
+  },
+  "hooks": {
+    "enabled": true,
+    "file": "hooks/hooks.json",
+    "autoProgress": true,
+    "certification": true
+  },
+  "mcp_servers": {
+    "learning-content": {
+      "script": "scripts/content-server.js",
+      "port": 3333,
+      "enabled": true
+    },
+    "assessment-engine": {
+      "script": "scripts/assessment-engine.js",
+      "port": 3334,
+      "enabled": true
+    },
+    "progress-tracker": {
+      "script": "scripts/progress-tracker.js",
+      "port": 3335,
+      "enabled": true
+    },
+    "skill-matcher": {
+      "script": "scripts/skill-matcher.js",
+      "port": 3336,
+      "enabled": true
+    }
+  },
+  "configuration": {
+    "maxConcurrentUsers": 10000,
+    "cacheDuration": 3600,
+    "enableAnalytics": true,
+    "enableCertifications": true,
+    "assessmentTimeLimit": 45,
+    "minPassingScore": 75
+  },
+  "marketplace": {
+    "installCommand": "plugin add custom-plugin-rust",
+    "pricing": "free",
+    "category": "education",
+    "featured": true
   }
 }
