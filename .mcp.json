@@ -1,0 +1,49 @@
+{
+  "mcpServers": {
+    "learning-content-server": {
+      "description": "Learning content server for roadmaps and learning paths",
+      "type": "nodejs",
+      "script": "scripts/content-server.js",
+      "env": {
+        "PORT": "3333"
+      },
+      "capabilities": [
+        "serve-roadmaps",
+        "serve-learning-paths",
+        "serve-agent-info"
+      ]
+    },
+    "assessment-engine": {
+      "description": "Assessment generation and evaluation engine",
+      "type": "nodejs",
+      "script": "scripts/assessment-engine.js",
+      "capabilities": [
+        "generate-assessments",
+        "evaluate-answers",
+        "provide-feedback"
+      ]
+    },
+    "progress-tracker": {
+      "description": "User progress tracking and analytics",
+      "type": "nodejs",
+      "script": "scripts/progress-tracker.js",
+      "capabilities": [
+        "track-progress",
+        "award-badges",
+        "manage-certificates",
+        "provide-analytics"
+      ]
+    }
+  },
+  "endpoints": {
+    "content": "http://localhost:3333",
+    "assessment": "http://localhost:3334",
+    "progress": "http://localhost:3335"
+  },
+  "features": {
+    "autoScaling": true,
+    "healthCheck": true,
+    "logging": true,
+    "metrics": true
+  }
+}
