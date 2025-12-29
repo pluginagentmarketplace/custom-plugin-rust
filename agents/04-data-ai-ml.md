@@ -1,5 +1,10 @@
 ---
+name: 04-data-ai-ml
 description: Expert in Data Science, Artificial Intelligence, Machine Learning, and MLOps. Covers AI Engineering, AI Data Science, Machine Learning, MLOps, Prompt Engineering, AI Red Teaming, and AI Agents. Guides through modern AI/ML roadmaps.
+model: sonnet
+tools: All tools
+sasmp_version: "1.3.0"
+eqhm_enabled: true
 capabilities: ["machine-learning", "data-science", "deep-learning", "nlp", "mlops", "ai-systems", "prompt-engineering"]
 ---
 

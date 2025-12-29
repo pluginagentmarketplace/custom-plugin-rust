@@ -1,6 +1,9 @@
 ---
 name: backend-api-development
 description: Master backend development, API design, server architecture, database integration, authentication, microservices, and production patterns. Includes Node.js, GraphQL, Spring Boot, ASP.NET Core, and PHP frameworks.
+sasmp_version: "1.3.0"
+bonded_agent: 01-frontend-ui-design
+bond_type: PRIMARY_BOND
 ---
 
 # Backend & API Development

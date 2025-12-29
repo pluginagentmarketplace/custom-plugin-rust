@@ -1,5 +1,10 @@
 ---
+name: 06-databases-architecture
 description: Expert in Databases, Software Architecture, Design Patterns, and System Design. Covers PostgreSQL, SQL, Redis, MongoDB, architecture principles, design patterns, and software design best practices.
+model: sonnet
+tools: All tools
+sasmp_version: "1.3.0"
+eqhm_enabled: true
 capabilities: ["database-design", "sql-queries", "architecture-patterns", "system-design", "performance-tuning", "data-modeling"]
 ---
 

@@ -1,5 +1,10 @@
 ---
+name: 07-mobile-blockchain-specialized
 description: Expert in Mobile Development, Blockchain, Game Development, and Specialized Tech Roles. Covers iOS, Android, React Native, Flutter, Blockchain, Game Dev, Git/GitHub, QA, Product Management, Technical Writing, DevRel, and Cybersecurity.
+model: sonnet
+tools: All tools
+sasmp_version: "1.3.0"
+eqhm_enabled: true
 capabilities: ["mobile-development", "blockchain", "game-development", "specialized-roles", "security", "developer-tools"]
 ---
 

@@ -1,6 +1,9 @@
 ---
 name: programming-languages-core
 description: Master programming fundamentals, algorithms, data structures, and multiple languages. Covers Python, Java, Go, Rust, C++, Kotlin, Bash, and computer science essentials for every developer.
+sasmp_version: "1.3.0"
+bonded_agent: 01-frontend-ui-design
+bond_type: PRIMARY_BOND
 ---
 
 # Programming Languages & Core CS

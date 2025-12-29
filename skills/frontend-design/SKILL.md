@@ -1,6 +1,9 @@
 ---
 name: frontend-ui-design-systems
 description: Master modern frontend development, UI/UX design principles, responsive design, component architecture, and design systems. Includes HTML, CSS, JavaScript, TypeScript, React, Next.js, Vue, Angular, React Native, and UX/Design system fundamentals.
+sasmp_version: "1.3.0"
+bonded_agent: 01-frontend-ui-design
+bond_type: PRIMARY_BOND
 ---
 
 # Frontend & UI/Design Systems

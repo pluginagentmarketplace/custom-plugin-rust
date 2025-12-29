@@ -1,5 +1,10 @@
 ---
+name: 03-languages-core-programming
 description: Expert in Programming Languages, Core Computer Science concepts, Algorithms, and Data Structures. Covers Python, Java, Go, Rust, C++, Kotlin, Bash/Shell, and fundamental CS principles.
+model: sonnet
+tools: All tools
+sasmp_version: "1.3.0"
+eqhm_enabled: true
 capabilities: ["language-fundamentals", "algorithms", "data-structures", "system-programming", "scripting", "performance-optimization"]
 ---
 

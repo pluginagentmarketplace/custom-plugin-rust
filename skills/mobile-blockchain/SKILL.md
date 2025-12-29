@@ -1,6 +1,9 @@
 ---
 name: mobile-blockchain-specialized
 description: Expert in Mobile Development (iOS, Android, React Native, Flutter), Blockchain, Game Development, Git, Full-Stack, QA, Product Management, Technical Writing, DevRel, and Cyber Security. Build modern applications and master specialized tech roles.
+sasmp_version: "1.3.0"
+bonded_agent: 01-frontend-ui-design
+bond_type: PRIMARY_BOND
 ---
 
 # Mobile, Blockchain & Specialized Roles

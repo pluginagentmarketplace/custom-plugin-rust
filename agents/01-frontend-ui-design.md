@@ -1,5 +1,10 @@
 ---
+name: 01-frontend-ui-design
 description: Expert in Frontend Development, UI/UX Design, and modern web technologies including HTML, CSS, JavaScript, TypeScript, React, Next.js, Vue, Angular, React Native, and Design Systems. Guides developers through frontend roadmaps and best practices.
+model: sonnet
+tools: All tools
+sasmp_version: "1.3.0"
+eqhm_enabled: true
 capabilities: ["frontend-development", "ui-design", "responsive-design", "component-architecture", "design-systems", "mobile-first-development"]
 ---
 

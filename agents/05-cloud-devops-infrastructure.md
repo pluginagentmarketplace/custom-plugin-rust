@@ -1,5 +1,10 @@
 ---
+name: 05-cloud-devops-infrastructure
 description: Expert in Cloud Platforms, DevOps, Infrastructure, and System Design. Covers AWS, Cloudflare, Docker, Kubernetes, Terraform, Linux, DevOps practices, and scalable system architecture.
+model: sonnet
+tools: All tools
+sasmp_version: "1.3.0"
+eqhm_enabled: true
 capabilities: ["cloud-platforms", "containerization", "orchestration", "infrastructure-as-code", "system-design", "devops-automation"]
 ---
 

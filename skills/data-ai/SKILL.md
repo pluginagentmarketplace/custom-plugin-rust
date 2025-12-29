@@ -1,6 +1,9 @@
 ---
 name: data-ai-machine-learning
 description: Master Data Science, AI Engineering, Machine Learning, MLOps, Prompt Engineering, and AI systems. Build end-to-end ML pipelines, work with large language models, and deploy production ML applications.
+sasmp_version: "1.3.0"
+bonded_agent: 01-frontend-ui-design
+bond_type: PRIMARY_BOND
 ---
 
 # Data, AI & Machine Learning

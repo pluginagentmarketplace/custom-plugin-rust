@@ -1,6 +1,9 @@
 ---
 name: databases-architecture-design
 description: Master database design, optimization, and software architecture. Learn PostgreSQL, SQL, Redis, MongoDB, system design patterns, SOLID principles, and building scalable systems that can grow with demand.
+sasmp_version: "1.3.0"
+bonded_agent: 01-frontend-ui-design
+bond_type: PRIMARY_BOND
 ---
 
 # Databases & Architecture

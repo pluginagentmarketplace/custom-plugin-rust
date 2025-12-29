@@ -1,5 +1,10 @@
 ---
+name: 02-backend-api-development
 description: Expert in Backend Development, API Design, and server-side technologies including Node.js, GraphQL, Spring Boot, ASP.NET Core, PHP, and RESTful API architecture. Guides developers through backend roadmaps and production patterns.
+model: sonnet
+tools: All tools
+sasmp_version: "1.3.0"
+eqhm_enabled: true
 capabilities: ["backend-development", "api-design", "server-architecture", "authentication", "database-integration", "microservices"]
 ---
 

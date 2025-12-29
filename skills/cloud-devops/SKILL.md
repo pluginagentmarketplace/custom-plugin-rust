@@ -1,6 +1,9 @@
 ---
 name: cloud-devops-infrastructure
 description: Master Cloud Platforms, DevOps, Infrastructure as Code, and System Design. Build scalable systems on AWS, Cloudflare, Docker, Kubernetes, Terraform, and Linux. Implement CI/CD pipelines and modern infrastructure.
+sasmp_version: "1.3.0"
+bonded_agent: 01-frontend-ui-design
+bond_type: PRIMARY_BOND
 ---
 
 # Cloud, DevOps & Infrastructure
