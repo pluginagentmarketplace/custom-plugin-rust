@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "name": "rust-development-assistant",
   "version": "2.0.0",
-  "description": "Comprehensive Rust programming plugin with 8 specialized agents and 12 Golden Format skills for mastering Rust",
+  "description": "Rust programming plugin with specialized agents for ownership, concurrency, systems programming, and web development",
   "author": {
     "name": "Dr. Umit Kacar & Muhsin Elcicek",
     "email": "kacarumit.phd@gmail.com"
@@ -22,27 +22,21 @@
   ],
   "agents": [
     "./agents/01-rust-fundamentals.md",
-    "./agents/02-rust-ownership.md",
-    "./agents/03-rust-types.md",
-    "./agents/04-rust-error-handling.md",
-    "./agents/05-rust-concurrency.md",
-    "./agents/06-rust-cargo.md",
-    "./agents/07-rust-async.md",
-    "./agents/08-rust-advanced.md"
+    "./agents/02-rust-types.md",
+    "./agents/03-rust-concurrency.md",
+    "./agents/04-rust-memory.md",
+    "./agents/05-rust-web.md",
+    "./agents/06-rust-cli.md",
+    "./agents/07-rust-embedded.md"
   ],
   "skills": [
-    "./skills/rust-basics/SKILL.md",
     "./skills/rust-ownership/SKILL.md",
-    "./skills/rust-structs/SKILL.md",
-    "./skills/rust-enums/SKILL.md",
     "./skills/rust-traits/SKILL.md",
-    "./skills/rust-generics/SKILL.md",
-    "./skills/rust-error/SKILL.md",
-    "./skills/rust-collections/SKILL.md",
-    "./skills/rust-concurrency/SKILL.md",
     "./skills/rust-async/SKILL.md",
-    "./skills/rust-cargo/SKILL.md",
-    "./skills/rust-macros/SKILL.md"
+    "./skills/rust-web-axum/SKILL.md",
+    "./skills/rust-cli-clap/SKILL.md",
+    "./skills/rust-error-handling/SKILL.md",
+    "./skills/rust-testing/SKILL.md"
   ],
   "commands": [
     "./commands/rust-check.md",
