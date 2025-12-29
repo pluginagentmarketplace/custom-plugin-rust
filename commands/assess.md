@@ -1,3 +1,9 @@
+---
+name: assess
+description: Knowledge Assessment
+allowed-tools: Read
+---
+
 # /assess - Knowledge Assessment
 
 Take a comprehensive assessment to evaluate your current knowledge level in a specific technology or role.

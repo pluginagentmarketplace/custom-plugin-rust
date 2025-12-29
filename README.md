@@ -1,284 +1,262 @@
-# 🚀 Custom-Plugin-Rust
+<div align="center">
 
-## The Ultimate AI-Powered Developer Learning System
+<!-- Animated Typing Banner -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=2E9EF7&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=100&lines=Rust+Assistant;7+Agents+%7C+7+Skills;Claude+Code+Plugin" alt="Rust Assistant" />
 
-**Master 71+ Technologies | 7 Expert Agents | 1000+ Code Examples | Certified Learning Paths**
+<br/>
 
-A production-grade Claude Code plugin designed to help developers of all levels master any technology stack through AI-powered, personalized learning paths. Powered by developer roadmaps and built with enterprise-grade architecture.
+<!-- Badge Row 1: Status Badges -->
+[![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge)](https://github.com/pluginagentmarketplace/custom-plugin-rust/releases)
+[![License](https://img.shields.io/badge/License-Custom-yellow?style=for-the-badge)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Production-brightgreen?style=for-the-badge)](#)
+[![SASMP](https://img.shields.io/badge/SASMP-v1.3.0-blueviolet?style=for-the-badge)](#)
 
-> **One command to install. Your entire tech journey powered by Claude Code.**
+<!-- Badge Row 2: Content Badges -->
+[![Agents](https://img.shields.io/badge/Agents-7-orange?style=flat-square&logo=robot)](#-agents)
+[![Skills](https://img.shields.io/badge/Skills-7-purple?style=flat-square&logo=lightning)](#-skills)
+[![Commands](https://img.shields.io/badge/Commands-4-green?style=flat-square&logo=terminal)](#-commands)
 
-```bash
-plugin add custom-plugin-rust
-```
+<br/>
 
-## 🎯 Features
-
-### 7 Specialized Agents
-- **Frontend & UI/Design** - HTML, CSS, JavaScript, React, Vue, Angular, UX Design
-- **Backend & API** - Node.js, GraphQL, Spring Boot, ASP.NET Core, PHP
-- **Languages & Core** - Python, Java, Go, Rust, C++, Kotlin, Bash, CS Fundamentals
-- **Data, AI & ML** - Machine Learning, AI Engineering, Data Science, MLOps
-- **Cloud & DevOps** - AWS, Docker, Kubernetes, Terraform, Linux, System Design
-- **Databases & Architecture** - PostgreSQL, SQL, Redis, MongoDB, Design Patterns
-- **Mobile & Specialized** - iOS, Android, Flutter, Blockchain, Game Dev, QA, PM, Tech Writing
-
-### 71+ Developer Roles
-Complete learning paths for every developer specialty:
-- ✅ Frontend (12 roles)
-- ✅ Backend (8 roles)
-- ✅ Languages (9 roles)
-- ✅ Data/AI/ML (9 roles)
-- ✅ Cloud/DevOps (9 roles)
-- ✅ Databases (6 roles)
-- ✅ Mobile/Blockchain (19+ roles)
-
-### 4 Powerful Commands
-- `/learn` - Get personalized learning paths
-- `/roadmap` - View detailed role roadmaps
-- `/assess` - Test your knowledge with interactive assessments
-- `/browse` - Explore all 71+ roles
-
-### Invokable Skills
-7 specialized skills with 1000+ code examples and patterns:
-- Frontend/UI/Design Systems
-- Backend/API Development
-- Programming Languages & Core CS
-- Data Science & AI/ML
-- Cloud/DevOps & Infrastructure
-- Databases & Architecture
-- Mobile/Blockchain & Specialized Roles
-
-## 📦 Installation
-
-### Using Claude Code
-
-```bash
-# From a local directory
-claude code ./custom-plugin-rust
-
-# Or add to plugins directory
-cp -r custom-plugin-rust ~/.claude-code/plugins/
-```
-
-### Using Marketplace (Coming Soon)
-
-One-line installation from the Claude Code marketplace:
-```
-plugin add custom-plugin-rust
-```
-
-## 🚀 Quick Start
-
-### 1. Start Learning
-```
-/learn
-```
-Get a personalized learning path for your chosen role.
-
-### 2. View a Roadmap
-```
-/roadmap react
-```
-See the complete React learning roadmap with milestones and resources.
-
-### 3. Take an Assessment
-```
-/assess javascript
-```
-Test your JavaScript knowledge and get recommendations.
-
-### 4. Browse All Roles
-```
-/browse
-```
-Explore all 71+ available developer roles and specializations.
-
-## 📚 Learning Content
-
-Each role includes:
-- ✅ **Fundamentals** - Core concepts you must master
-- ✅ **Intermediate Skills** - Building on basics
-- ✅ **Advanced Topics** - Specialized knowledge
-- ✅ **Project Milestones** - Hands-on practice
-- ✅ **Code Examples** - 1000+ examples across all topics
-- ✅ **Resources** - Books, courses, documentation
-- ✅ **Assessments** - Measure your progress
-
-## 🏗️ Plugin Structure
-
-```
-custom-plugin-rust/
-├── .claude-plugin/
-│   └── plugin.json                 # Plugin manifest
-├── agents/                         # 7 specialized agents
-│   ├── 01-frontend-ui-design.md
-│   ├── 02-backend-api-development.md
-│   ├── 03-languages-core-programming.md
-│   ├── 04-data-ai-ml.md
-│   ├── 05-cloud-devops-infrastructure.md
-│   ├── 06-databases-architecture.md
-│   └── 07-mobile-blockchain-specialized.md
-├── commands/                       # 4 slash commands
-│   ├── learn.md
-│   ├── roadmap.md
-│   ├── assess.md
-│   └── browse.md
-├── skills/                         # 7 invokable skills
-│   ├── frontend-design/SKILL.md
-│   ├── backend-api/SKILL.md
-│   ├── languages/SKILL.md
-│   ├── data-ai/SKILL.md
-│   ├── cloud-devops/SKILL.md
-│   ├── databases-architecture/SKILL.md
-│   └── mobile-blockchain/SKILL.md
-├── README.md
-├── CHANGELOG.md
-└── plugin.json
-```
-
-## 🎓 Supported Roles
-
-### Frontend & Design
-HTML, CSS, JavaScript, TypeScript, React, Next.js, Vue, Angular, React Native, UX Design, Design Systems
-
-### Backend & API
-Node.js, GraphQL, Spring Boot, ASP.NET Core, PHP, API Design
-
-### Languages
-Python, Java, Go, Rust, C++, Kotlin, Bash/Shell, Computer Science, Data Structures
-
-### Data & AI/ML
-AI Engineer, AI Data Scientist, Machine Learning, MLOps, Prompt Engineering, Data Science, Data Engineer, BI Analyst
-
-### Cloud & DevOps
-AWS, Cloudflare, Docker, Kubernetes, Terraform, Linux, DevOps, System Design
-
-### Databases
-PostgreSQL DBA, SQL, Redis, MongoDB, Software Architecture
-
-### Mobile & Specialized
-iOS, Swift, Android, Flutter, React Native, Git, Blockchain, Game Dev, QA, Product Manager, Engineering Manager, Technical Writer, DevRel, Cybersecurity
-
-## 💡 Example Usage
-
-### Learn React
-```
-User: /learn
-Agent: Choose your role
-User: React
-Agent: Shows personalized React learning path with weekly milestones
-```
-
-### Get Backend Roadmap
-```
-User: /roadmap node.js
-Agent: Displays complete Node.js learning roadmap with prerequisites, milestones, projects
-```
-
-### Assess Knowledge
-```
-User: /assess python
-Agent: Provides interactive assessment with feedback and recommendations
-```
-
-### Browse All Options
-```
-User: /browse --trending
-Agent: Shows latest and trending developer roles to learn
-```
-
-## 🔧 Development
-
-### Adding New Content
-
-1. **Add Agent**: Create new markdown file in `agents/`
-2. **Add Command**: Create new markdown file in `commands/`
-3. **Add Skill**: Create new folder in `skills/` with `SKILL.md`
-4. **Update plugin.json**: Reference new components
-
-### Standards
-
-- **Agents**: Include description, capabilities, use cases
-- **Skills**: YAML frontmatter with name and description
-- **Commands**: Clear examples and related commands
-- **Code Examples**: Working, tested code samples
-
-## 📊 Plugin Statistics
-
-| Component | Count | Status |
-|-----------|-------|--------|
-| Agents | 7 | ✅ Complete |
-| Commands | 4 | ✅ Complete |
-| Skills | 7 | ✅ Complete |
-| Roles | 71+ | ✅ Complete |
-| Code Examples | 1000+ | ✅ Complete |
-| Learning Hours | 1000+ | ✅ Complete |
-
-## 🌟 Key Features
-
-✅ **Multi-Agent System**: 7 specialized agents covering all tech domains
-✅ **Comprehensive Content**: 1000+ code examples and learning materials
-✅ **Structured Learning**: Step-by-step paths from beginner to expert
-✅ **Interactive Assessments**: Test knowledge and track progress
-✅ **Real-world Projects**: Hands-on practice with practical applications
-✅ **Career Guidance**: Job market insights and salary information
-✅ **Community Resources**: Links to official docs, courses, communities
-✅ **Skill Tracking**: Measure progress and earn badges
-
-## 🎯 Use Cases
-
-- 👨‍🎓 **Students** - Structured learning for any tech specialization
-- 🔄 **Career Changers** - Clear paths to switch tech stacks
-- 📈 **Professionals** - Upskill in new technologies
-- 🏢 **Teams** - Unified learning platform for organizations
-- 🤖 **AI-Powered** - Leverage Claude's knowledge for better learning
-
-## 📖 Documentation
-
-Each component includes detailed documentation:
-- **Agents**: Role description, expertise areas, capabilities
-- **Commands**: Usage examples, options, related commands
-- **Skills**: Code examples, best practices, resources
-
-## 🤝 Contributing
-
-Contributions welcome! Please:
-1. Follow the existing structure
-2. Add quality code examples
-3. Include documentation
-4. Test thoroughly
-
-## 📝 License
-
-MIT License - See LICENSE file for details
-
-## 🔗 Links
-
-- **Repository**: https://github.com/pluginagentmarketplace/custom-plugin-rust
-- **Claude Code Docs**: https://docs.claude.com
-- **Developer Roadmaps**: https://roadmap.sh
-
-## 🚀 What's Next
-
-- [ ] More specialized agent skills
-- [ ] Interactive coding challenges
-- [ ] Live mentorship integration
-- [ ] Certification programs
-- [ ] Team collaboration features
-- [ ] Progress analytics dashboard
-
-## 📞 Support
-
-For issues, questions, or suggestions:
-1. Check the documentation
-2. Review agent descriptions
-3. Ask specific questions in the appropriate agent
-
-## ⭐ Star History
-
-Your support matters! Star the repository to show you find this useful.
+<!-- Quick CTA Row -->
+[📦 **Install Now**](#-quick-start) · [🤖 **Explore Agents**](#-agents) · [📖 **Documentation**](#-documentation) · [⭐ **Star this repo**](https://github.com/pluginagentmarketplace/custom-plugin-rust)
 
 ---
 
-**Happy Learning! 🎓** Master any developer skill with the ultimate learning system powered by Claude Code.
+### What is this?
+
+> **Rust Assistant** is a Claude Code plugin with **7 agents** and **7 skills** for rust development.
+
+</div>
+
+---
+
+## 📑 Table of Contents
+
+<details>
+<summary>Click to expand</summary>
+
+- [Quick Start](#-quick-start)
+- [Features](#-features)
+- [Agents](#-agents)
+- [Skills](#-skills)
+- [Commands](#-commands)
+- [Documentation](#-documentation)
+- [Contributing](#-contributing)
+- [License](#-license)
+
+</details>
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Claude Code CLI v2.0.27+
+- Active Claude subscription
+
+### Installation (Choose One)
+
+<details open>
+<summary><strong>Option 1: From Marketplace (Recommended)</strong></summary>
+
+```bash
+# Step 1️⃣ Add the marketplace
+/plugin add marketplace pluginagentmarketplace/custom-plugin-rust
+
+# Step 2️⃣ Install the plugin
+/plugin install custom-plugin-rust@pluginagentmarketplace-rust
+
+# Step 3️⃣ Restart Claude Code
+# Close and reopen your terminal/IDE
+```
+
+</details>
+
+<details>
+<summary><strong>Option 2: Local Installation</strong></summary>
+
+```bash
+# Clone the repository
+git clone https://github.com/pluginagentmarketplace/custom-plugin-rust.git
+cd custom-plugin-rust
+
+# Load locally
+/plugin load .
+
+# Restart Claude Code
+```
+
+</details>
+
+### ✅ Verify Installation
+
+After restart, you should see these agents:
+
+```
+custom-plugin-rust:04-data-ai-ml
+custom-plugin-rust:06-databases-architecture
+custom-plugin-rust:01-frontend-ui-design
+custom-plugin-rust:03-languages-core-programming
+custom-plugin-rust:02-backend-api-development
+... and 2 more
+```
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+|---------|-------------|
+| 🤖 **7 Agents** | Specialized AI agents for rust tasks |
+| 🛠️ **7 Skills** | Reusable capabilities with Golden Format |
+| ⌨️ **4 Commands** | Quick slash commands |
+| 🔄 **SASMP v1.3.0** | Full protocol compliance |
+
+---
+
+## 🤖 Agents
+
+### 7 Specialized Agents
+
+| # | Agent | Purpose |
+|---|-------|---------|
+| 1 | **04-data-ai-ml** | Expert in Data Science, Artificial Intelligence, Machine Lea |
+| 2 | **06-databases-architecture** | Expert in Databases, Software Architecture, Design Patterns, |
+| 3 | **01-frontend-ui-design** | Expert in Frontend Development, UI/UX Design, and modern web |
+| 4 | **03-languages-core-programming** | Expert in Programming Languages, Core Computer Science conce |
+| 5 | **02-backend-api-development** | Expert in Backend Development, API Design, and server-side t |
+| 6 | **05-cloud-devops-infrastructure** | Expert in Cloud Platforms, DevOps, Infrastructure, and Syste |
+| 7 | **07-mobile-blockchain-specialized** | Expert in Mobile Development, Blockchain, Game Development,  |
+
+---
+
+## 🛠️ Skills
+
+### Available Skills
+
+| Skill | Description | Invoke |
+|-------|-------------|--------|
+| `data-ai` | Master Data Science, AI Engineering, Machine Learning, MLOps | `Skill("custom-plugin-rust:data-ai")` |
+| `cloud-devops` | Master Cloud Platforms, DevOps, Infrastructure as Code, and  | `Skill("custom-plugin-rust:cloud-devops")` |
+| `mobile-blockchain` | Expert in Mobile Development (iOS, Android, React Native, Fl | `Skill("custom-plugin-rust:mobile-blockchain")` |
+| `languages` | Master programming fundamentals, algorithms, data structures | `Skill("custom-plugin-rust:languages")` |
+| `databases-architecture` | Master database design, optimization, and software architect | `Skill("custom-plugin-rust:databases-architecture")` |
+| `frontend-design` | Master modern frontend development, UI/UX design principles, | `Skill("custom-plugin-rust:frontend-design")` |
+| `backend-api` | Master backend development, API design, server architecture, | `Skill("custom-plugin-rust:backend-api")` |
+
+---
+
+## ⌨️ Commands
+
+| Command | Description |
+|---------|-------------|
+| `/learn` | Learning Path Selection |
+| `/assess` | Knowledge Assessment |
+| `/roadmap` | View Developer Roadmap |
+| `/browse` | Explore All Developer Roles |
+
+---
+
+## 📚 Documentation
+
+| Document | Description |
+|----------|-------------|
+| [CHANGELOG.md](CHANGELOG.md) | Version history |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute |
+| [LICENSE](LICENSE) | License information |
+
+---
+
+## 📁 Project Structure
+
+<details>
+<summary>Click to expand</summary>
+
+```
+custom-plugin-rust/
+├── 📁 .claude-plugin/
+│   ├── plugin.json
+│   └── marketplace.json
+├── 📁 agents/              # 7 agents
+├── 📁 skills/              # 7 skills (Golden Format)
+├── 📁 commands/            # 4 commands
+├── 📁 hooks/
+├── 📄 README.md
+├── 📄 CHANGELOG.md
+└── 📄 LICENSE
+```
+
+</details>
+
+---
+
+## 📅 Metadata
+
+| Field | Value |
+|-------|-------|
+| **Version** | 1.0.0 |
+| **Last Updated** | 2025-12-29 |
+| **Status** | Production Ready |
+| **SASMP** | v1.3.0 |
+| **Agents** | 7 |
+| **Skills** | 7 |
+| **Commands** | 4 |
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md).
+
+1. Fork the repository
+2. Create your feature branch
+3. Follow the Golden Format for new skills
+4. Submit a pull request
+
+---
+
+## ⚠️ Security
+
+> **Important:** This repository contains third-party code and dependencies.
+>
+> - ✅ Always review code before using in production
+> - ✅ Check dependencies for known vulnerabilities
+> - ✅ Follow security best practices
+> - ✅ Report security issues privately via [Issues](../../issues)
+
+---
+
+## 📝 License
+
+Copyright © 2025 **Dr. Umit Kacar** & **Muhsin Elcicek**
+
+Custom License - See [LICENSE](LICENSE) for details.
+
+---
+
+## 👥 Contributors
+
+<table>
+<tr>
+<td align="center">
+<strong>Dr. Umit Kacar</strong><br/>
+Senior AI Researcher & Engineer
+</td>
+<td align="center">
+<strong>Muhsin Elcicek</strong><br/>
+Senior Software Architect
+</td>
+</tr>
+</table>
+
+---
+
+<div align="center">
+
+**Made with ❤️ for the Claude Code Community**
+
+[![GitHub](https://img.shields.io/badge/GitHub-pluginagentmarketplace-black?style=for-the-badge&logo=github)](https://github.com/pluginagentmarketplace)
+
+</div>

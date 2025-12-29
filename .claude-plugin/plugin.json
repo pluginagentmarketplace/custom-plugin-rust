@@ -110,7 +110,7 @@
     }
   ],
   "homepage": "https://github.com/pluginagentmarketplace/custom-plugin-rust",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "features": {
     "total_agents": 7,
     "total_skills": 7,

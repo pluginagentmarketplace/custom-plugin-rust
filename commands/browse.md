@@ -1,3 +1,9 @@
+---
+name: browse
+description: Explore All Developer Roles
+allowed-tools: Read
+---
+
 # /browse - Explore All Developer Roles
 
 Browse and discover all 71 available developer roles and specialized skill paths.

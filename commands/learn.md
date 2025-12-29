@@ -1,3 +1,9 @@
+---
+name: learn
+description: Learning Path Selection
+allowed-tools: Read
+---
+
 # /learn - Learning Path Selection
 
 Start your learning journey by selecting a developer role and getting a personalized learning path.

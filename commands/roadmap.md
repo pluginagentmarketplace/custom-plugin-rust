@@ -1,3 +1,9 @@
+---
+name: roadmap
+description: View Developer Roadmap
+allowed-tools: Read
+---
+
 # /roadmap - View Developer Roadmap
 
 Display the detailed roadmap for a specific developer role with learning objectives, prerequisites, and progression path.

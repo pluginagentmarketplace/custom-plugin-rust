@@ -1,0 +1,15 @@
+{
+  "name": "pluginagentmarketplace-rust",
+  "owner": {
+    "name": "Plugin Agent Marketplace",
+    "email": "pluginagentmarketplace@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "custom-plugin-rust",
+      "source": "./",
+      "description": "Claude Code plugin for rust development",
+      "version": "1.0.0"
+    }
+  ]
+}
