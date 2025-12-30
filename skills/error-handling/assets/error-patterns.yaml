@@ -1,0 +1,95 @@
+# Error Handling Patterns Configuration
+
+patterns:
+  # Option patterns
+  option:
+    - name: match_option
+      description: Full pattern matching on Option
+      code: |
+        match value {
+            Some(v) => handle_value(v),
+            None => handle_none(),
+        }
+
+    - name: if_let
+      description: Handle only Some case
+      code: |
+        if let Some(v) = value {
+            handle_value(v);
+        }
+
+    - name: unwrap_or
+      description: Provide default value
+      code: |
+        let v = value.unwrap_or(default);
+
+    - name: map
+      description: Transform inner value
+      code: |
+        let doubled = value.map(|x| x * 2);
+
+  # Result patterns
+  result:
+    - name: question_mark
+      description: Propagate error with ?
+      code: |
+        let data = fallible_operation()?;
+
+    - name: match_result
+      description: Full pattern matching on Result
+      code: |
+        match operation() {
+            Ok(v) => handle_success(v),
+            Err(e) => handle_error(e),
+        }
+
+    - name: map_err
+      description: Transform error type
+      code: |
+        let result = operation()
+            .map_err(|e| AppError::from(e))?;
+
+    - name: context
+      description: Add context with anyhow
+      code: |
+        let data = read_file(path)
+            .context("Failed to read configuration")?;
+
+# Error type recommendations
+error_types:
+  library:
+    recommended: thiserror
+    reason: Define explicit error types with derive macro
+    example: |
+      #[derive(Error, Debug)]
+      pub enum LibError {
+          #[error("validation failed: {0}")]
+          Validation(String),
+      }
+
+  application:
+    recommended: anyhow
+    reason: Easy error handling with context
+    example: |
+      fn main() -> anyhow::Result<()> {
+          let config = load_config()
+              .context("startup failed")?;
+          Ok(())
+      }
+
+# Anti-patterns to avoid
+anti_patterns:
+  - name: unwrap_in_production
+    description: Using unwrap() in production code
+    problem: Panics on None/Err
+    solution: Use ?, unwrap_or, or explicit match
+
+  - name: ignore_error
+    description: Using let _ = result
+    problem: Silently ignores errors
+    solution: Handle or log the error explicitly
+
+  - name: panic_for_recoverable
+    description: Using panic! for recoverable errors
+    problem: Crashes the program
+    solution: Return Result instead

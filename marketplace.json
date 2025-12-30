@@ -1,17 +1,24 @@
 {
-  "name": "rust-development-assistant",
-  "version": "2.0.0",
-  "description": "Comprehensive Rust programming plugin with 8 specialized agents and 12 Golden Format skills",
+  "name": "custom-plugin-rust",
+  "version": "2.1.0",
+  "description": "Complete Rust Programming System - Learn AND Develop with expert AI agents. Master ownership, borrowing, async/await while building real projects.",
   "author": {
-    "name": "Dr. Umit Kacar & Muhsin Elcicek",
-    "email": "kacarumit.phd@gmail.com"
+    "name": "Plugin Agent Marketplace",
+    "email": "pluginagentmarketplace@gmail.com"
   },
   "repository": "https://github.com/pluginagentmarketplace/custom-plugin-rust",
   "license": "MIT",
-  "keywords": ["rust", "cargo", "ownership", "borrowing", "async", "wasm"],
+  "keywords": ["rust", "cargo", "ownership", "borrowing", "async", "tokio", "systems-programming"],
   "sasmp_version": "1.3.0",
   "eqhm_enabled": true,
-  "agents_count": 8,
-  "skills_count": 12,
-  "commands_count": 4
+  "plugin_type": "hybrid",
+  "agents_count": 7,
+  "skills_count": 5,
+  "commands_count": 8,
+  "features": {
+    "learning_agents": 3,
+    "development_agents": 4,
+    "learning_commands": 2,
+    "development_commands": 6
+  }
 }

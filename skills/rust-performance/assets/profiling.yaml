@@ -1,0 +1,8 @@
+tools:
+  - cargo flamegraph
+  - perf
+  - criterion (benchmarking)
+release_flags:
+  - lto = true
+  - codegen-units = 1
+  - panic = "abort"

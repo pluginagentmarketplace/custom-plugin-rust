@@ -1,182 +1,180 @@
 {
   "name": "custom-plugin-rust",
-  "version": "1.0.0",
-  "description": "Ultimate Developer Learning System - Master 71+ Developer Roles with 7 Expert Agents and Specialized Skills. Complete roadmaps from Fundamentals to Advanced levels covering Frontend, Backend, Languages, Data/AI, Cloud/DevOps, Databases, and Specialized Tech.",
-  "author": "Custom Plugin Community",
+  "version": "2.1.0",
+  "description": "Complete Rust Programming System - Learn AND Develop with expert AI agents. Master ownership, borrowing, async/await while building real projects. Hybrid learning + development workflow.",
+  "author": {
+    "name": "Plugin Agent Marketplace",
+    "email": "pluginagentmarketplace@gmail.com"
+  },
   "repository": "https://github.com/pluginagentmarketplace/custom-plugin-rust",
   "keywords": [
-    "developer-learning",
-    "roadmaps",
-    "skill-development",
-    "technical-education",
-    "career-growth",
-    "agent-skills",
-    "ai-powered-learning"
+    "rust",
+    "systems-programming",
+    "ownership",
+    "borrowing",
+    "async-await",
+    "tokio",
+    "cargo",
+    "development",
+    "learning"
   ],
   "agents": [
     {
-      "name": "frontend-ui-design",
-      "file": "agents/01-frontend-ui-design.md",
-      "description": "Expert in Frontend Development, UI/UX Design, and modern web technologies"
+      "name": "rust-fundamentals-agent",
+      "file": "./agents/rust-fundamentals-agent.md",
+      "description": "Rust ownership, borrowing, lifetimes, and memory safety specialist",
+      "category": "learning"
     },
     {
-      "name": "backend-api-development",
-      "file": "agents/02-backend-api-development.md",
-      "description": "Expert in Backend Development, API Design, and server-side technologies"
+      "name": "rust-type-system-agent",
+      "file": "./agents/rust-type-system-agent.md",
+      "description": "Rust traits, generics, type system, and pattern matching specialist",
+      "category": "learning"
     },
     {
-      "name": "languages-core-programming",
-      "file": "agents/03-languages-core-programming.md",
-      "description": "Expert in Programming Languages, Algorithms, and Data Structures"
+      "name": "rust-async-agent",
+      "file": "./agents/rust-async-agent.md",
+      "description": "Rust async/await, Tokio, and concurrent programming specialist",
+      "category": "learning"
     },
     {
-      "name": "data-ai-machine-learning",
-      "file": "agents/04-data-ai-ml.md",
-      "description": "Expert in Data Science, AI, Machine Learning, and MLOps"
+      "name": "rust-tooling-agent",
+      "file": "./agents/rust-tooling-agent.md",
+      "description": "Rust toolchain, Cargo, testing, and development workflow specialist",
+      "category": "development"
     },
     {
-      "name": "cloud-devops-infrastructure",
-      "file": "agents/05-cloud-devops-infrastructure.md",
-      "description": "Expert in Cloud Platforms, DevOps, and Infrastructure Management"
+      "name": "rust-web-agent",
+      "file": "./agents/rust-web-agent.md",
+      "description": "Rust web development with Axum, Actix, and REST API specialist",
+      "category": "development"
     },
     {
-      "name": "databases-architecture",
-      "file": "agents/06-databases-architecture.md",
-      "description": "Expert in Databases, Architecture, and System Design"
+      "name": "rust-project-agent",
+      "file": "./agents/rust-project-agent.md",
+      "description": "Rust project scaffolding, structure, and dependency management specialist",
+      "category": "development"
     },
     {
-      "name": "mobile-blockchain-specialized",
-      "file": "agents/07-mobile-blockchain-specialized.md",
-      "description": "Expert in Mobile Development, Blockchain, and Specialized Tech Roles"
-    }
-  ],
-  "commands": [
-    {
-      "name": "learn",
-      "file": "commands/learn.md",
-      "description": "Start a personalized learning path for your chosen developer role"
-    },
-    {
-      "name": "roadmap",
-      "file": "commands/roadmap.md",
-      "description": "View detailed roadmap for a specific developer role with milestones and resources"
-    },
-    {
-      "name": "assess",
-      "file": "commands/assess.md",
-      "description": "Take a comprehensive knowledge assessment in any technology or role"
-    },
-    {
-      "name": "browse",
-      "file": "commands/browse.md",
-      "description": "Explore and discover all 71+ available developer roles and specializations"
+      "name": "rust-debugger-agent",
+      "file": "./agents/rust-debugger-agent.md",
+      "description": "Rust debugging, error fixing, and code optimization specialist",
+      "category": "development"
     }
   ],
   "skills": [
     {
-      "name": "frontend-ui-design-systems",
-      "file": "skills/frontend-design/SKILL.md",
-      "description": "Master frontend development, UI/UX design, and design systems"
+      "name": "ownership-borrowing",
+      "file": "./skills/ownership-borrowing/SKILL.md",
+      "description": "Master Rust's ownership, borrowing, and lifetime system",
+      "category": "learning"
     },
     {
-      "name": "backend-api-development",
-      "file": "skills/backend-api/SKILL.md",
-      "description": "Master backend development, API design, and server architecture"
+      "name": "error-handling",
+      "file": "./skills/error-handling/SKILL.md",
+      "description": "Master Rust's Result, Option, and error handling patterns",
+      "category": "learning"
     },
     {
-      "name": "programming-languages-core",
-      "file": "skills/languages/SKILL.md",
-      "description": "Master programming languages, algorithms, and data structures"
+      "name": "async-programming",
+      "file": "./skills/async-programming/SKILL.md",
+      "description": "Master Rust async/await with Tokio",
+      "category": "learning"
     },
     {
-      "name": "data-ai-machine-learning",
-      "file": "skills/data-ai/SKILL.md",
-      "description": "Master data science, AI, machine learning, and MLOps"
+      "name": "trait-generics",
+      "file": "./skills/trait-generics/SKILL.md",
+      "description": "Master Rust traits, generics, and type system",
+      "category": "learning"
     },
     {
-      "name": "cloud-devops-infrastructure",
-      "file": "skills/cloud-devops/SKILL.md",
-      "description": "Master cloud platforms, DevOps, and infrastructure as code"
-    },
-    {
-      "name": "databases-architecture-design",
-      "file": "skills/databases-architecture/SKILL.md",
-      "description": "Master databases, architecture, and system design"
-    },
-    {
-      "name": "mobile-blockchain-specialized",
-      "file": "skills/mobile-blockchain/SKILL.md",
-      "description": "Master mobile development, blockchain, and specialized roles"
+      "name": "cargo-ecosystem",
+      "file": "./skills/cargo-ecosystem/SKILL.md",
+      "description": "Master Cargo, testing, and Rust development tools",
+      "category": "development"
     }
   ],
+  "commands": [
+    {
+      "name": "rust-learn",
+      "file": "./commands/rust-learn.md",
+      "description": "Start interactive Rust learning session",
+      "category": "learning"
+    },
+    {
+      "name": "rust-practice",
+      "file": "./commands/rust-practice.md",
+      "description": "Practice Rust with coding exercises",
+      "category": "learning"
+    },
+    {
+      "name": "rust-check",
+      "file": "./commands/rust-check.md",
+      "description": "Review and analyze Rust code",
+      "category": "development"
+    },
+    {
+      "name": "rust-new",
+      "file": "./commands/rust-new.md",
+      "description": "Create a new Rust project with best-practice structure",
+      "category": "development"
+    },
+    {
+      "name": "rust-add",
+      "file": "./commands/rust-add.md",
+      "description": "Add dependencies to Rust project",
+      "category": "development"
+    },
+    {
+      "name": "rust-build",
+      "file": "./commands/rust-build.md",
+      "description": "Build and compile Rust project",
+      "category": "development"
+    },
+    {
+      "name": "rust-test",
+      "file": "./commands/rust-test.md",
+      "description": "Run tests in Rust project",
+      "category": "development"
+    },
+    {
+      "name": "rust-fix",
+      "file": "./commands/rust-fix.md",
+      "description": "Automatically fix Rust code issues",
+      "category": "development"
+    }
+  ],
+  "hooks": "./hooks/hooks.json",
   "homepage": "https://github.com/pluginagentmarketplace/custom-plugin-rust",
   "license": "MIT",
+  "sasmp_version": "1.3.0",
+  "eqhm_enabled": true,
+  "plugin_type": "hybrid",
   "features": {
     "total_agents": 7,
-    "total_skills": 7,
-    "total_commands": 4,
-    "total_roles": 71,
-    "learning_content": {
-      "code_examples": "1000+",
-      "learning_paths": "71+",
-      "estimated_hours": "1000+"
-    }
+    "total_skills": 5,
+    "total_commands": 8,
+    "learning_agents": 3,
+    "development_agents": 4,
+    "learning_commands": 2,
+    "development_commands": 6,
+    "topics_covered": [
+      "Ownership & Borrowing",
+      "Lifetimes",
+      "Traits & Generics",
+      "Error Handling",
+      "Async/Await",
+      "Cargo & Tooling",
+      "Web Development",
+      "Testing",
+      "Project Scaffolding",
+      "Debugging & Optimization"
+    ]
   },
   "categories": [
+    "rust-programming",
+    "systems-programming",
     "developer-education",
-    "skill-learning",
-    "career-development",
-    "technical-training",
-    "agent-powered-learning"
-  ],
-  "supports": {
-    "claude_code": "1.0+",
-    "agents": true,
-    "skills": true,
-    "commands": true,
-    "hooks": true,
-    "mcp": true
-  },
-  "hooks": {
-    "enabled": true,
-    "file": "hooks/hooks.json",
-    "autoProgress": true,
-    "certification": true
-  },
-  "mcp_servers": {
-    "learning-content": {
-      "script": "scripts/content-server.js",
-      "port": 3333,
-      "enabled": true
-    },
-    "assessment-engine": {
-      "script": "scripts/assessment-engine.js",
-      "port": 3334,
-      "enabled": true
-    },
-    "progress-tracker": {
-      "script": "scripts/progress-tracker.js",
-      "port": 3335,
-      "enabled": true
-    },
-    "skill-matcher": {
-      "script": "scripts/skill-matcher.js",
-      "port": 3336,
-      "enabled": true
-    }
-  },
-  "configuration": {
-    "maxConcurrentUsers": 10000,
-    "cacheDuration": 3600,
-    "enableAnalytics": true,
-    "enableCertifications": true,
-    "assessmentTimeLimit": 45,
-    "minPassingScore": 75
-  },
-  "marketplace": {
-    "installCommand": "plugin add custom-plugin-rust",
-    "pricing": "free",
-    "category": "education",
-    "featured": true
-  }
+    "development-tools"
+  ]
 }

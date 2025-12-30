@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "name": "rust-development-assistant",
-  "version": "2.0.0",
-  "description": "Rust programming plugin with specialized agents for ownership, concurrency, systems programming, and web development",
+  "version": "2.2.0",
+  "description": "Comprehensive Rust plugin with 8 specialized agents and 12 Golden Format skills for systems programming, async, WebAssembly, and DevOps",
   "author": {
     "name": "Dr. Umit Kacar & Muhsin Elcicek",
     "email": "kacarumit.phd@gmail.com"
@@ -11,38 +11,44 @@
   "license": "SEE LICENSE IN LICENSE",
   "keywords": [
     "rust",
-    "rustlang",
-    "cargo",
+    "systems-programming",
     "ownership",
     "borrowing",
-    "lifetimes",
-    "async",
+    "async-await",
+    "tokio",
+    "cargo",
     "wasm",
-    "systems-programming"
+    "cli"
   ],
   "agents": [
-    "./agents/01-rust-fundamentals.md",
-    "./agents/02-rust-types.md",
-    "./agents/03-rust-concurrency.md",
-    "./agents/04-rust-memory.md",
-    "./agents/05-rust-web.md",
-    "./agents/06-rust-cli.md",
-    "./agents/07-rust-embedded.md"
+    "./agents/rust-fundamentals-agent.md",
+    "./agents/rust-type-system-agent.md",
+    "./agents/rust-async-agent.md",
+    "./agents/rust-tooling-agent.md",
+    "./agents/rust-web-agent.md",
+    "./agents/rust-project-agent.md",
+    "./agents/rust-debugger-agent.md",
+    "./agents/08-rust-devops.md"
   ],
   "skills": [
-    "./skills/rust-ownership/SKILL.md",
-    "./skills/rust-traits/SKILL.md",
-    "./skills/rust-async/SKILL.md",
-    "./skills/rust-web-axum/SKILL.md",
-    "./skills/rust-cli-clap/SKILL.md",
-    "./skills/rust-error-handling/SKILL.md",
-    "./skills/rust-testing/SKILL.md"
+    "./skills/ownership-borrowing/SKILL.md",
+    "./skills/error-handling/SKILL.md",
+    "./skills/async-programming/SKILL.md",
+    "./skills/trait-generics/SKILL.md",
+    "./skills/cargo-ecosystem/SKILL.md",
+    "./skills/rust-docker/SKILL.md",
+    "./skills/rust-wasm/SKILL.md",
+    "./skills/rust-cli/SKILL.md",
+    "./skills/rust-testing/SKILL.md",
+    "./skills/rust-performance/SKILL.md",
+    "./skills/rust-concurrency/SKILL.md",
+    "./skills/rust-macros/SKILL.md"
   ],
   "commands": [
+    "./commands/rust-learn.md",
+    "./commands/rust-practice.md",
     "./commands/rust-check.md",
-    "./commands/rust-new.md",
-    "./commands/rust-build.md",
-    "./commands/rust-test.md"
+    "./commands/rust-new.md"
   ],
   "hooks": {
     "hooks_config_path": "./hooks/hooks.json"

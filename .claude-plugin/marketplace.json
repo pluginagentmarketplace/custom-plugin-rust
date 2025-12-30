@@ -8,8 +8,8 @@
     {
       "name": "custom-plugin-rust",
       "source": "./",
-      "description": "Claude Code plugin for rust development",
-      "version": "1.0.0"
+      "description": "Complete Rust Programming System - Learn AND Develop with expert AI agents. Master ownership, borrowing, async/await while building real projects. Hybrid learning + development workflow.",
+      "version": "2.1.0"
     }
   ]
 }

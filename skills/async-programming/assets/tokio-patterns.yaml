@@ -1,0 +1,153 @@
+# Tokio Async Patterns Configuration
+# Common patterns for async Rust programming
+
+runtime_configs:
+  # For CLI applications
+  current_thread:
+    flavor: "current_thread"
+    description: "Single-threaded runtime, good for CLI tools"
+    example: |
+      #[tokio::main(flavor = "current_thread")]
+      async fn main() {}
+
+  # For web servers
+  multi_thread:
+    flavor: "multi_thread"
+    worker_threads: 4
+    description: "Multi-threaded runtime, good for servers"
+    example: |
+      #[tokio::main]
+      async fn main() {}
+
+  # Custom configuration
+  custom:
+    flavor: "multi_thread"
+    worker_threads: 8
+    max_blocking_threads: 512
+    description: "Custom runtime for high-load scenarios"
+
+task_patterns:
+  spawn:
+    description: "Fire and forget async task"
+    use_when: "Task result not needed immediately"
+    example: |
+      tokio::spawn(async move {
+          process_in_background().await;
+      });
+
+  spawn_blocking:
+    description: "Run blocking code without blocking async runtime"
+    use_when: "CPU-intensive or blocking I/O operations"
+    example: |
+      tokio::task::spawn_blocking(|| {
+          heavy_computation()
+      }).await?
+
+  join:
+    description: "Run multiple futures concurrently"
+    use_when: "Need results from multiple async operations"
+    example: |
+      let (a, b, c) = tokio::join!(
+          fetch_data_a(),
+          fetch_data_b(),
+          fetch_data_c()
+      );
+
+  select:
+    description: "Wait for first of multiple futures"
+    use_when: "Racing operations or timeouts"
+    example: |
+      tokio::select! {
+          val = async_op_1() => handle_1(val),
+          val = async_op_2() => handle_2(val),
+      }
+
+synchronization:
+  mutex:
+    description: "Async-safe mutual exclusion"
+    crate: "tokio::sync::Mutex"
+    warning: "Don't hold across .await points if possible"
+    example: |
+      let data = Arc::new(Mutex::new(vec![]));
+      let mut lock = data.lock().await;
+      lock.push(item);
+
+  rwlock:
+    description: "Read-write lock for async contexts"
+    crate: "tokio::sync::RwLock"
+    use_when: "Many readers, few writers"
+    example: |
+      let lock = RwLock::new(Config::default());
+      let config = lock.read().await;
+
+  semaphore:
+    description: "Limit concurrent operations"
+    use_when: "Rate limiting, connection pools"
+    example: |
+      let sem = Arc::new(Semaphore::new(10));
+      let permit = sem.acquire().await?;
+
+channels:
+  mpsc:
+    description: "Multi-producer, single-consumer"
+    bounded: true
+    example: |
+      let (tx, mut rx) = mpsc::channel(100);
+      tx.send(msg).await?;
+
+  broadcast:
+    description: "Multi-producer, multi-consumer broadcast"
+    use_when: "Publishing events to multiple subscribers"
+    example: |
+      let (tx, _) = broadcast::channel(16);
+      let mut rx = tx.subscribe();
+
+  oneshot:
+    description: "Single-use channel for request-response"
+    use_when: "Actor pattern, async callbacks"
+    example: |
+      let (tx, rx) = oneshot::channel();
+      tx.send(result).ok();
+
+  watch:
+    description: "Single-producer, multi-consumer watch channel"
+    use_when: "Configuration updates, state broadcasts"
+    example: |
+      let (tx, rx) = watch::channel(initial);
+      tx.send(updated)?;
+
+timeout_patterns:
+  simple_timeout:
+    description: "Add timeout to any future"
+    example: |
+      tokio::time::timeout(
+          Duration::from_secs(5),
+          async_operation()
+      ).await??
+
+  with_retry:
+    description: "Retry with exponential backoff"
+    example: |
+      for attempt in 0..3 {
+          match timeout(Duration::from_secs(5), op()).await {
+              Ok(Ok(result)) => return Ok(result),
+              _ => tokio::time::sleep(Duration::from_millis(100 * 2_u64.pow(attempt))).await,
+          }
+      }
+
+common_mistakes:
+  - name: "Blocking in async"
+    problem: "Using std::thread::sleep or CPU-heavy ops"
+    solution: "Use tokio::time::sleep or spawn_blocking"
+
+  - name: "Holding mutex across await"
+    problem: "Lock guard held while awaiting"
+    solution: "Drop lock before await or use async mutex"
+
+  - name: "Not canceling tasks"
+    problem: "Spawned tasks leak on shutdown"
+    solution: "Use JoinHandle and abort on cleanup"
+
+  - name: "Unbounded channels"
+    problem: "Memory grows without limit"
+    solution: "Use bounded channels with backpressure"

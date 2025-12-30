@@ -1,0 +1,202 @@
+# Rust Traits and Generics Patterns
+# Common patterns for type system mastery
+
+standard_traits:
+  marker_traits:
+    - name: Send
+      description: "Type can be transferred across thread boundaries"
+      auto_implemented: true
+      example: "impl Send for MyType {}"
+
+    - name: Sync
+      description: "Type can be shared between threads via reference"
+      auto_implemented: true
+      example: "// Auto-implemented when &T is Send"
+
+    - name: Copy
+      description: "Type can be copied by simple memory copy"
+      requires: Clone
+      example: "#[derive(Copy, Clone)]"
+
+    - name: Sized
+      description: "Type has known size at compile time"
+      auto_implemented: true
+      opt_out: "?Sized"
+
+  derivable_traits:
+    - name: Clone
+      method: "clone(&self) -> Self"
+      derive: "#[derive(Clone)]"
+
+    - name: Debug
+      method: "fmt(&self, f: &mut Formatter) -> fmt::Result"
+      derive: "#[derive(Debug)]"
+
+    - name: PartialEq
+      method: "eq(&self, other: &Self) -> bool"
+      derive: "#[derive(PartialEq)]"
+
+    - name: Eq
+      requires: PartialEq
+      description: "Reflexive, symmetric, transitive equality"
+
+    - name: PartialOrd
+      method: "partial_cmp(&self, other: &Self) -> Option<Ordering>"
+      requires: PartialEq
+
+    - name: Ord
+      method: "cmp(&self, other: &Self) -> Ordering"
+      requires: [PartialOrd, Eq]
+
+    - name: Hash
+      method: "hash<H: Hasher>(&self, state: &mut H)"
+      requires_for: HashMap/HashSet keys
+
+    - name: Default
+      method: "default() -> Self"
+      derive: "#[derive(Default)]"
+
+operator_traits:
+  arithmetic:
+    - trait: Add
+      method: "add(self, rhs: Rhs) -> Self::Output"
+      operator: "+"
+
+    - trait: Sub
+      method: "sub(self, rhs: Rhs) -> Self::Output"
+      operator: "-"
+
+    - trait: Mul
+      operator: "*"
+
+    - trait: Div
+      operator: "/"
+
+  comparison:
+    - trait: PartialEq
+      operator: "=="
+      method: "eq(&self, other: &Rhs) -> bool"
+
+    - trait: PartialOrd
+      operators: ["<", ">", "<=", ">="]
+
+  indexing:
+    - trait: Index
+      method: "index(&self, index: Idx) -> &Self::Output"
+      operator: "[]"
+
+    - trait: IndexMut
+      method: "index_mut(&mut self, index: Idx) -> &mut Self::Output"
+      operator: "[]"
+
+conversion_traits:
+  - name: From
+    method: "from(value: T) -> Self"
+    use_for: "Infallible conversion from T to Self"
+    example: |
+      impl From<i32> for MyType {
+          fn from(value: i32) -> Self { ... }
+      }
+
+  - name: Into
+    method: "into(self) -> T"
+    note: "Auto-implemented when From is implemented"
+
+  - name: TryFrom
+    method: "try_from(value: T) -> Result<Self, Self::Error>"
+    use_for: "Fallible conversion"
+
+  - name: TryInto
+    note: "Auto-implemented when TryFrom is implemented"
+
+  - name: AsRef
+    method: "as_ref(&self) -> &T"
+    use_for: "Cheap reference-to-reference conversion"
+
+  - name: AsMut
+    method: "as_mut(&mut self) -> &mut T"
+
+  - name: Deref
+    method: "deref(&self) -> &Self::Target"
+    enables: "Auto-dereferencing and deref coercion"
+
+iterator_traits:
+  - name: Iterator
+    method: "next(&mut self) -> Option<Self::Item>"
+    example: |
+      impl Iterator for Counter {
+          type Item = u32;
+          fn next(&mut self) -> Option<Self::Item> { ... }
+      }
+
+  - name: IntoIterator
+    method: "into_iter(self) -> Self::IntoIter"
+    enables: "for x in collection"
+
+  - name: FromIterator
+    method: "from_iter<I>(iter: I) -> Self"
+    enables: ".collect()"
+
+generic_patterns:
+  basic:
+    description: "Simple generic function"
+    example: |
+      fn largest<T: PartialOrd>(list: &[T]) -> &T {
+          list.iter().max().unwrap()
+      }
+
+  multiple_bounds:
+    description: "Multiple trait bounds"
+    example: |
+      fn process<T: Clone + Debug>(item: T) { }
+      // Or with where clause
+      fn process<T>(item: T) where T: Clone + Debug { }
+
+  associated_types:
+    description: "Type defined within trait"
+    example: |
+      trait Container {
+          type Item;
+          fn get(&self) -> &Self::Item;
+      }
+
+  default_type:
+    description: "Default generic type parameter"
+    example: |
+      trait Add<Rhs = Self> {
+          type Output;
+          fn add(self, rhs: Rhs) -> Self::Output;
+      }
+
+  phantom_data:
+    description: "Zero-sized marker for unused type parameters"
+    example: |
+      struct Id<T> {
+          value: u64,
+          _marker: PhantomData<T>,
+      }
+
+common_patterns:
+  newtype:
+    description: "Wrapper type for implementing foreign traits"
+    example: |
+      struct Meters(f64);
+      impl From<f64> for Meters {
+          fn from(v: f64) -> Self { Meters(v) }
+      }
+
+  extension_trait:
+    description: "Add methods to existing types"
+    example: |
+      trait StringExt {
+          fn is_blank(&self) -> bool;
+      }
+      impl StringExt for String {
+          fn is_blank(&self) -> bool { self.trim().is_empty() }
+      }
+
+  sealed_trait:
+    description: "Prevent external implementations"
+    example: |
+      mod private { pub trait Sealed {} }
+      pub trait MyTrait: private::Sealed {}

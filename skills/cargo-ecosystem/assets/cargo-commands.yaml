@@ -1,0 +1,262 @@
+# Cargo Commands Reference
+# Complete reference for Rust's package manager and build system
+
+basic_commands:
+  new:
+    command: "cargo new <name>"
+    description: "Create new package with binary target"
+    options:
+      --lib: "Create library package"
+      --vcs: "Initialize VCS (git, hg, pijul, fossil, none)"
+      --edition: "Rust edition (2015, 2018, 2021)"
+      --name: "Set package name (different from directory)"
+    examples:
+      - "cargo new my-app"
+      - "cargo new my-lib --lib"
+      - "cargo new my-app --edition 2021"
+
+  init:
+    command: "cargo init"
+    description: "Create package in existing directory"
+    options:
+      --lib: "Create library package"
+      --name: "Set package name"
+
+  build:
+    command: "cargo build"
+    description: "Compile the current package"
+    options:
+      --release: "Build with optimizations"
+      --target: "Build for target triple"
+      --features: "Enable features"
+      --all-features: "Enable all features"
+      --no-default-features: "Disable default features"
+      -j/--jobs: "Number of parallel jobs"
+    examples:
+      - "cargo build"
+      - "cargo build --release"
+      - "cargo build --features async,serde"
+
+  run:
+    command: "cargo run"
+    description: "Build and execute"
+    options:
+      --release: "Run with optimizations"
+      --bin: "Run specific binary"
+      --example: "Run example"
+      "--": "Pass arguments to binary"
+    examples:
+      - "cargo run"
+      - "cargo run --release"
+      - "cargo run -- arg1 arg2"
+      - "cargo run --example demo"
+
+  test:
+    command: "cargo test"
+    description: "Run tests"
+    options:
+      --release: "Test with optimizations"
+      --lib: "Test only library"
+      --bin: "Test specific binary"
+      --test: "Test specific integration test"
+      --doc: "Test documentation examples"
+      --no-run: "Compile but don't run"
+      --nocapture: "Show stdout"
+      -- <filter>: "Filter tests by name"
+    examples:
+      - "cargo test"
+      - "cargo test test_name"
+      - "cargo test -- --nocapture"
+      - "cargo test --doc"
+
+  check:
+    command: "cargo check"
+    description: "Check code without building"
+    faster_than: "cargo build"
+    use_for: "Quick error checking during development"
+
+  clippy:
+    command: "cargo clippy"
+    description: "Run Clippy linter"
+    options:
+      --fix: "Auto-fix warnings"
+      --: "Pass args to clippy"
+      -W: "Warn on lint"
+      -A: "Allow lint"
+      -D: "Deny lint"
+    examples:
+      - "cargo clippy"
+      - "cargo clippy --fix"
+      - "cargo clippy -- -D warnings"
+
+  fmt:
+    command: "cargo fmt"
+    description: "Format code with rustfmt"
+    options:
+      --check: "Check if formatted"
+      --all: "Format all packages"
+    examples:
+      - "cargo fmt"
+      - "cargo fmt --check"
+
+  doc:
+    command: "cargo doc"
+    description: "Generate documentation"
+    options:
+      --open: "Open in browser"
+      --no-deps: "Don't document dependencies"
+      --document-private-items: "Include private items"
+    examples:
+      - "cargo doc --open"
+      - "cargo doc --no-deps"
+
+dependency_commands:
+  add:
+    command: "cargo add <crate>"
+    description: "Add dependency to Cargo.toml"
+    options:
+      --dev: "Add as dev dependency"
+      --build: "Add as build dependency"
+      --features: "Enable features"
+      --optional: "Make optional"
+      --git: "Add from git repository"
+      --path: "Add from local path"
+      --version: "Specify version"
+    examples:
+      - "cargo add serde"
+      - "cargo add serde --features derive"
+      - "cargo add tokio --features full"
+      - "cargo add my-lib --path ../my-lib"
+
+  remove:
+    command: "cargo remove <crate>"
+    description: "Remove dependency"
+    options:
+      --dev: "Remove from dev dependencies"
+      --build: "Remove from build dependencies"
+
+  update:
+    command: "cargo update"
+    description: "Update dependencies in Cargo.lock"
+    options:
+      -p: "Update specific package"
+      --dry-run: "Show what would be updated"
+
+  tree:
+    command: "cargo tree"
+    description: "Display dependency tree"
+    options:
+      -d: "Show duplicates only"
+      -i: "Invert (show dependents)"
+      --features: "Show features"
+    examples:
+      - "cargo tree"
+      - "cargo tree -d"
+      - "cargo tree -i serde"
+
+publishing_commands:
+  publish:
+    command: "cargo publish"
+    description: "Upload package to crates.io"
+    options:
+      --dry-run: "Check without uploading"
+      --allow-dirty: "Allow uncommitted changes"
+
+  login:
+    command: "cargo login"
+    description: "Save API token for crates.io"
+
+  package:
+    command: "cargo package"
+    description: "Create .crate file"
+    options:
+      --list: "Show files to be packaged"
+
+advanced_commands:
+  bench:
+    command: "cargo bench"
+    description: "Run benchmarks"
+    note: "Requires nightly or criterion crate"
+
+  audit:
+    command: "cargo audit"
+    description: "Check for security vulnerabilities"
+    install: "cargo install cargo-audit"
+
+  expand:
+    command: "cargo expand"
+    description: "Expand macros"
+    install: "cargo install cargo-expand"
+
+  watch:
+    command: "cargo watch"
+    description: "Auto-rebuild on changes"
+    install: "cargo install cargo-watch"
+    examples:
+      - "cargo watch -x check"
+      - "cargo watch -x 'test -- --nocapture'"
+      - "cargo watch -x run"
+
+  outdated:
+    command: "cargo outdated"
+    description: "Check for outdated dependencies"
+    install: "cargo install cargo-outdated"
+
+  bloat:
+    command: "cargo bloat"
+    description: "Analyze binary size"
+    install: "cargo install cargo-bloat"
+
+workspace_commands:
+  description: "Commands for multi-package workspaces"
+  options:
+    --workspace: "Run for all packages"
+    -p/--package: "Run for specific package"
+  examples:
+    - "cargo build --workspace"
+    - "cargo test -p my-crate"
+    - "cargo publish -p sub-package"
+
+profiles:
+  dev:
+    opt_level: 0
+    debug: true
+    use_for: "Development builds"
+
+  release:
+    opt_level: 3
+    debug: false
+    lto: false
+    use_for: "Production builds"
+
+  test:
+    inherits: "dev"
+    use_for: "Test builds"
+
+  bench:
+    inherits: "release"
+    use_for: "Benchmark builds"
+
+common_workflows:
+  quick_check:
+    steps:
+      - "cargo fmt --check"
+      - "cargo clippy -- -D warnings"
+      - "cargo test"
+    description: "CI-style validation"
+
+  release_prep:
+    steps:
+      - "cargo update"
+      - "cargo audit"
+      - "cargo test --release"
+      - "cargo doc --no-deps"
+      - "cargo publish --dry-run"
+    description: "Prepare for release"
+
+  performance_check:
+    steps:
+      - "cargo build --release"
+      - "cargo bloat --release"
+      - "cargo bench"
+    description: "Check performance"
