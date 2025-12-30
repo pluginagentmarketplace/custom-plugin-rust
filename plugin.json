@@ -1,7 +1,7 @@
 {
   "name": "custom-plugin-rust",
-  "version": "2.1.0",
-  "description": "Complete Rust Programming System - Learn AND Develop with expert AI agents. Master ownership, borrowing, async/await while building real projects. Hybrid learning + development workflow.",
+  "version": "2.2.0",
+  "description": "Complete Rust Programming System - Learn AND Develop with expert AI agents. Master ownership, borrowing, async/await while building real projects. Production-grade agents and skills.",
   "author": {
     "name": "Plugin Agent Marketplace",
     "email": "pluginagentmarketplace@gmail.com"
@@ -16,7 +16,10 @@
     "tokio",
     "cargo",
     "development",
-    "learning"
+    "learning",
+    "devops",
+    "docker",
+    "wasm"
   ],
   "agents": [
     {
@@ -60,6 +63,12 @@
       "file": "./agents/rust-debugger-agent.md",
       "description": "Rust debugging, error fixing, and code optimization specialist",
       "category": "development"
+    },
+    {
+      "name": "rust-devops-agent",
+      "file": "./agents/08-rust-devops.md",
+      "description": "Rust DevOps, CI/CD, Docker, cross-compilation, and deployment specialist",
+      "category": "devops"
     }
   ],
   "skills": [
@@ -92,6 +101,48 @@
       "file": "./skills/cargo-ecosystem/SKILL.md",
       "description": "Master Cargo, testing, and Rust development tools",
       "category": "development"
+    },
+    {
+      "name": "rust-testing",
+      "file": "./skills/rust-testing/SKILL.md",
+      "description": "Master Rust testing - unit tests, integration tests, mocking, and TDD",
+      "category": "development"
+    },
+    {
+      "name": "rust-cli",
+      "file": "./skills/rust-cli/SKILL.md",
+      "description": "Build professional CLI applications with clap and TUI",
+      "category": "development"
+    },
+    {
+      "name": "rust-macros",
+      "file": "./skills/rust-macros/SKILL.md",
+      "description": "Master Rust macros - declarative and procedural macros",
+      "category": "advanced"
+    },
+    {
+      "name": "rust-concurrency",
+      "file": "./skills/rust-concurrency/SKILL.md",
+      "description": "Master Rust concurrency - threads, channels, and parallel iterators",
+      "category": "advanced"
+    },
+    {
+      "name": "rust-performance",
+      "file": "./skills/rust-performance/SKILL.md",
+      "description": "Master Rust performance - profiling, benchmarking, and optimization",
+      "category": "advanced"
+    },
+    {
+      "name": "rust-docker",
+      "file": "./skills/rust-docker/SKILL.md",
+      "description": "Master Docker containerization for Rust applications",
+      "category": "devops"
+    },
+    {
+      "name": "rust-wasm",
+      "file": "./skills/rust-wasm/SKILL.md",
+      "description": "Master WebAssembly with Rust - wasm-pack and browser integration",
+      "category": "advanced"
     }
   ],
   "commands": [
@@ -151,11 +202,16 @@
   "eqhm_enabled": true,
   "plugin_type": "hybrid",
   "features": {
-    "total_agents": 7,
-    "total_skills": 5,
+    "total_agents": 8,
+    "total_skills": 12,
     "total_commands": 8,
     "learning_agents": 3,
     "development_agents": 4,
+    "devops_agents": 1,
+    "learning_skills": 4,
+    "development_skills": 3,
+    "advanced_skills": 4,
+    "devops_skills": 1,
     "learning_commands": 2,
     "development_commands": 6,
     "topics_covered": [
@@ -168,13 +224,20 @@
       "Web Development",
       "Testing",
       "Project Scaffolding",
-      "Debugging & Optimization"
+      "Debugging & Optimization",
+      "DevOps & CI/CD",
+      "Docker",
+      "WebAssembly",
+      "Macros",
+      "Concurrency",
+      "Performance"
     ]
   },
   "categories": [
     "rust-programming",
     "systems-programming",
     "developer-education",
-    "development-tools"
+    "development-tools",
+    "devops"
   ]
 }
