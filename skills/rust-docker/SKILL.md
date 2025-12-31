@@ -2,7 +2,7 @@
 name: rust-docker
 description: Master Docker containerization for Rust applications
 sasmp_version: "1.3.0"
-bonded_agent: rust-devops-agent
+bonded_agent: 08-rust-devops
 bond_type: PRIMARY_BOND
 version: "1.0.0"
 ---
