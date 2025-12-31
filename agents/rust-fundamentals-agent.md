@@ -5,6 +5,19 @@ model: sonnet
 tools: Read, Write, Edit, Bash, Grep, Glob, Task, WebSearch
 sasmp_version: "1.3.0"
 eqhm_enabled: true
+skills:
+  - rust-docker
+  - rust-wasm
+  - rust-performance
+  - rust-macros
+  - rust-cli
+  - rust-testing
+  - rust-concurrency
+triggers:
+  - "rust rust"
+  - "rust"
+  - "cargo"
+  - "rust fundamentals"
 bonded_skills:
   - ownership-borrowing
   - error-handling
