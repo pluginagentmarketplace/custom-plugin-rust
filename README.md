@@ -63,7 +63,7 @@
 
 ```bash
 # Step 1️⃣ Add the marketplace
-/plugin add marketplace pluginagentmarketplace/custom-plugin-rust
+/plugin marketplace add pluginagentmarketplace/custom-plugin-rust
 
 # Step 2️⃣ Install the plugin
 /plugin install rust-development-assistant@pluginagentmarketplace-rust
